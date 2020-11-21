@@ -1,3 +1,13 @@
+## Resources
+* Git branching and merging https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+
+
+
+
+====================================================================================================
+# DEFAULT REACT STUFF:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

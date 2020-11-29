@@ -30,28 +30,35 @@ export default class DishDetail extends Component {
     }
 
     renderComments(dish) {
-        return (
-            <div>
-                <h4>Comments</h4>
-                <ListGroup>
-                {
-                    dish.comments.map((comment) => {
-                        const d = new Date(comment.date);
-                        const format = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);
-                        let date = `${format}`;
-                        return (
-                        <ListGroupItem>
-                            <div>{comment.comment}</div>
-                            <div> - {comment.author} <span style={{color: 'darkgrey'}}>{date}</span></div>
-                        </ListGroupItem>
-                        )
-                    }) 
-                }
-                </ListGroup>
-
-            </div>
-
-        );
+        if (dish.comments !== null) {
+            return (
+                <div>
+                    <h4>Comments</h4>
+                    <ListGroup>
+                    {
+                        dish.comments.map((comment) => {
+                            const d = new Date(comment.date);
+                            const format = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);
+                            let date = `${format}`;
+                            return (
+                            <ListGroupItem>
+                                <div>{comment.comment}</div>
+                                <div> - {comment.author} <span style={{color: 'darkgrey'}}>{date}</span></div>
+                            </ListGroupItem>
+                            )
+                        }) 
+                    }
+                    </ListGroup>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <h4>Comments</h4>
+                    <div style={{color: 'darkgrey'}}>There's nothing here...</div>
+                </div>
+            );
+        }
     }
 
     render() {

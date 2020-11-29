@@ -34,6 +34,21 @@ export default class DishDetail extends Component {
             return (
                 <div>
                     <h4>Comments</h4>
+                    <ul className="list-unstyled"> 
+                    {
+                        dish.comments.map((comment) => {
+                            const d = new Date(comment.date);
+                            let formatted_date = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);;
+                            return (
+                            <li>
+                                <div>{comment.comment}</div>
+                                <div> - {comment.author} <span style={{color: 'darkgrey'}}>{formatted_date}</span></div>
+                            </li>
+                            )
+                        }) 
+                    }
+                    </ul>
+                    {/* //Pretty version I'm using in my own app
                     <ListGroup>
                     {
                         dish.comments.map((comment) => {
@@ -48,7 +63,8 @@ export default class DishDetail extends Component {
                             )
                         }) 
                     }
-                    </ListGroup>
+                    </ListGroup> 
+                    */}
                 </div>
             );
         } else {

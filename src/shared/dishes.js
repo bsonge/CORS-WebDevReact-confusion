@@ -44,7 +44,8 @@ export const DISHES =
             author: "25 Cent",
             date: "2011-12-02T17:57:28.556094Z"
             }
-        ]                        },
+        ]                        
+        }, 
         {
         id: 1,
         name:'Zucchipakoda',
@@ -53,22 +54,7 @@ export const DISHES =
         label:'',
         price:'1.99',
         description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce',
-        comments: [
-            {
-            id: 0,
-            rating: 5,
-            comment: "Zucchipakoda: Strange name, delicious result!",
-            author: "Joe Blow",
-            date: "2012-10-16T17:57:28.556094Z"
-            },
-            {
-            id: 1,
-            rating: 4,
-            comment: "I couldn't stop eating and now I may die of ruptured stomach.  10/10 would die again.",
-            author: "Terrence Ester",
-            date: "2014-09-05T17:57:28.556094Z"
-            },
-        ]
+        comments: null,
         },
         {
         id: 2,
@@ -82,7 +68,7 @@ export const DISHES =
             {
             id: 0,
             rating: 5,
-            comment: "Vadonut: Wait, this is just a donut!",
+            comment: "Vadonut - This tastes familiar...",
             author: "Ben Tennitis",
             date: "2012-10-16T17:57:28.556094Z"
             },
@@ -117,7 +103,7 @@ export const DISHES =
             {
             id: 5,
             rating: 2,
-            comment: "For the 3rd time, stop selling our products please.  Our lawyers are frothing at the mouth.",
+            comment: "For the 3rd time, please stop selling our products.  Our lawyers are frothing at the mouth!",
             author: "Dunkin Donuts Official",
             date: "2011-12-02T17:57:28.556094Z"
             }
@@ -135,7 +121,7 @@ export const DISHES =
             {
             id: 0,
             rating: 5,
-            comment: "ElaiCheese Cake: This is the best cheese cake I've ever had!",
+            comment: "ElaiCheese Cake - This is the best cheese cake I've ever had!",
             author: "Elizabeth Hawken",
             date: "2012-10-16T17:57:28.556094Z"
             },

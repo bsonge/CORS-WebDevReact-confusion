@@ -23,8 +23,8 @@ class Menu extends Component {
                 <div key={dish.id} className="col-12 col-md-5 mt-1">
                     <Card onClick={() => this.onDishSelect(dish)}>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
-                        <CardImgOverlay>
-                            <CardTitle>{dish.name}</CardTitle>
+                        <CardImgOverlay style={{color: 'white', background: "linear-gradient(180deg, rgba(0,0,0,0.5321691176470589) 0%, rgba(0,0,0,0.5181635154061625) 12%, rgba(254,226,166,0) 13%, rgba(253,187,45,0) 100%)"}}>
+                            <CardTitle><h5>{dish.name}</h5></CardTitle>
                         </CardImgOverlay>
                     </Card>
                 </div>

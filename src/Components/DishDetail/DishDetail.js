@@ -22,7 +22,7 @@ export default class DishDetail extends Component {
             <Card>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
                 <CardBody>
-                    <CardTitle>{dish.name}</CardTitle>
+                    <CardTitle><h5>{dish.name}</h5></CardTitle>
                     <CardText>{dish.description}</CardText>
                 </CardBody>
             </Card>
@@ -64,17 +64,19 @@ export default class DishDetail extends Component {
     render() {
         if(this.props.dish !== null) {
             return (
-                <div className="row">
-                    <div className="col-md-5 col-sm-12 m-1">
+                <div className="row" style={{
+                    backgroundColor: '#eeeeee',
+                    }}>
+                    <div className="col-md-5 col-sm-12 m-1" >
                         {this.renderDish(this.props.dish)}
                     </div>
-                    <div className="col-md-5 col-sm-12 m-1">
+                    <div className="col-md-5 col-sm-12 m-1" >
                         {this.renderComments(this.props.dish)}
                     </div>
                 </div>
             )
         } else {
-            return <div>empty!</div>;
+            return <div style={{color: 'darkgrey'}}>Click on a menu item to see the details!</div>;
         }
 
 

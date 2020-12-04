@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 
 // import { ListGroup, ListGroupItem } from 'reactstrap';
 
 export default class DishDetail extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     //PROPS: dish = dish object
-    //     this.state = {
-    //         DISH: null,
-    //     }
-    // }
-
-    // componentDidMount() {
-    //     this.setState({DISH: this.props.dish});
-    // }
 
     renderDish(dish) {
         return(
@@ -38,7 +27,7 @@ export default class DishDetail extends Component {
                     {
                         dish.comments.map((comment) => {
                             const d = new Date(comment.date);
-                            let formatted_date = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);;
+                            let formatted_date = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);
                             return (
                             <li>
                                 <div>{comment.comment}</div>
@@ -48,23 +37,6 @@ export default class DishDetail extends Component {
                         }) 
                     }
                     </ul>
-                    {/* //Pretty version I'm using in my own app
-                    <ListGroup>
-                    {
-                        dish.comments.map((comment) => {
-                            const d = new Date(comment.date);
-                            const format = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit'  }).format(d);
-                            let date = `${format}`;
-                            return (
-                            <ListGroupItem>
-                                <div>{comment.comment}</div>
-                                <div> - {comment.author} <span style={{color: 'darkgrey'}}>{date}</span></div>
-                            </ListGroupItem>
-                            )
-                        }) 
-                    }
-                    </ListGroup> 
-                    */}
                 </div>
             );
         } else {
@@ -94,8 +66,5 @@ export default class DishDetail extends Component {
         } else {
             return <div style={{color: 'darkgrey'}}>Click on a menu item to see the details!</div>;
         }
-
-
     }
-
 }

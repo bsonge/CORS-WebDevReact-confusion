@@ -50,7 +50,7 @@ export default class DishDetail extends Component {
     }
 
     render() {
-        if(this.props.dish !== null) {
+        if(this.props.dish !== null && this.props.dish !== undefined) {
             return (
                 <div className="row" style={{
                     backgroundColor: '#eeeeee',
